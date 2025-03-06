@@ -7,14 +7,16 @@ import TheHeader from '../components/organisms/TheHeader.vue';
 </script>
 
 <template>
-  <TheHeader/>
-  <SideBar />
-  <main>
+  <!-- <TheHeader/> -->
+  <!-- <SideBar /> -->
+  <!-- <main> -->
     <!-- <Http /> -->
     <!-- <CreatePost /> -->
     <SocialPosts />
-  </main>
+  <!-- </main> -->
+
 </template>
+
 <style>
 @import '../assets/base.css';
 aside { 

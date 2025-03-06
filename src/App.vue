@@ -1,41 +1,9 @@
+<script setup>
+// import Comp1 from './views/Comp1.vue';
+// import Comp2 from './views/Comp2.vue';
+import List1 from './views/List1.vue';
+</script>
+
 <template>
-  <v-card>
-    <v-layout>
-      <v-navigation-drawer
-        theme="dark"
-        permanent
-        rail
-      >
-        <v-list-item
-          prepend-avatar="https://randomuser.me/api/portraits/women/75.jpg"
-          nav
-        ></v-list-item>
-
-        <v-divider></v-divider>
-
-        <v-list
-          density="compact"
-          nav
-        >
-          <v-list-item prepend-icon="mdi-view-dashboard" value="dashboard"></v-list-item>
-
-          <v-list-item prepend-icon="mdi-forum" value="messages"></v-list-item>
-        </v-list>
-      </v-navigation-drawer>
-
-      <v-navigation-drawer permanent>
-        <v-list>
-          <v-list-item title="Home" value="home"></v-list-item>
-
-          <v-list-item title="Contacts" value="contacts"></v-list-item>
-
-          <v-list-item title="Settings" value="settings"></v-list-item>
-        </v-list>
-      </v-navigation-drawer>
-
-      <v-main style="height: 300px">
-        <p>welcome</p>
-      </v-main>
-    </v-layout>
-  </v-card>
+ <List1/>
 </template>
