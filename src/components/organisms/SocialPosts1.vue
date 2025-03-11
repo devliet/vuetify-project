@@ -111,7 +111,7 @@ async function fetchFields(skip, limit) {
 
 
   for (let index = 0; index <= limit.value-1; index++) {
-    console.log(index)
+    // console.log(index)
     posts.value.push({
       postId: fields3.value[index].postId,
       username: fields2.value[index].username,

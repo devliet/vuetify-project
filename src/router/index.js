@@ -4,14 +4,12 @@ import AboutView from '../views/AboutView.vue'
 import PrivacyView from '../views/PrivacyView.vue'
 import UserProfileView from '../views/UserProfileView.vue'
 import UserPostsView from '../views/UserPostsView.vue'
-import UserView from '../views/UserView.vue'
+// import UserView from '../views/UserView.vue'
 import ContactUs from '../components/organisms/ContactUs.vue'
 
-import Comp1 from '@/views/Comp1.vue'
-import Comp2 from '@/views/Comp2.vue'
-import Comp3 from '@/views/Comp3.vue'
-import Comp4 from '@/views/Comp4.vue'
-import Comp5 from '@/views/Comp5.vue'
+
+import CreatePost from '../components/molecules/CreatePost.vue'
+import UpdateTimeView from '../views/UpdateTimeView.vue'
 
 
 const router = createRouter({
@@ -22,11 +20,7 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-    {
-      path: '/about',
-      name: 'about',
-      component: AboutView
-    },
+
     {
       path: "/user/:userId",
       name: "user",
@@ -45,60 +39,54 @@ const router = createRouter({
         }
       ]
     },
-    {
-      path: '/privacy',
-      name: 'privacy',
-      alias: '/privacy-policy',
-      component: PrivacyView
-    },
-    {
-      path: '/contact',
-      name: 'contact',
-      alias: '/contact',
-      component: ContactUs
-    },
+  
 
     {
-      path: "/list2",
-      name: "list2",
-      redirect: { name: "user-profile" },
-      //  component: UserView,
+      path: '/manage',
+      name: 'manage',
+      component: HomeView,
       children: [
         {
-          path: 'comp1',
-          name: 'comp1',
-          component: Comp1
+          path: "posts-add",
+          name: "posts-add",
+          component: CreatePost
         },
-        {
-          path: 'comp2',
-          name: 'comp2',
-          component: Comp2
-        },
-
       ]
     },
-
     {
-      path: "/list3",
-      name: "list3",
-      redirect: { name: "user-profile" },
+      path: '/app',
+      name: 'app',
+      redirect: { name: "home" },
+
       children: [
         {
-          path: 'comp3',
-          name: 'comp3',
-          component: Comp3
+          path: 'privacy',
+          name: 'appprivacy',
+          component: PrivacyView
         },
         {
-          path: 'comp4',
-          name: 'comp4',
-          component: Comp4
+          path: 'contact',
+          name: 'contact',
+          alias: '/contact',
+          component: ContactUs
         },
         {
-          path: 'comp5',
-          name: 'comp5',
-          component: Comp5
+          path: 'about',
+          name: 'appabout',
+          component: AboutView
         },
-
+      ]
+    },
+    {
+      path: '/misc',
+      name: 'misc',
+      redirect: { name: "home" },
+      children: [
+        {
+          path: 'updatetime',
+          name: 'updatetime',
+          component: UpdateTimeView
+        },
       ]
     },
   ]

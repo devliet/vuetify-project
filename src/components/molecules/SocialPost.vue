@@ -37,7 +37,7 @@ import { useRouter } from 'vue-router';
 
 const showComments = ref(false);
 const onShowCommentClick = () => {
-  console.log("Showing comments");
+  
   showComments.value = !showComments.value;
 }
 
@@ -61,8 +61,8 @@ const navigateToUser = () => {
   });
 }
 onMounted(() => {
-  console.log(props.username);
-  console.log(props.userId);
+  // console.log(props.username);
+  // console.log(props.userId);
 
 });
 

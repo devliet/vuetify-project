@@ -49,6 +49,7 @@ const visibilityStore = useVisibilityStore()
 const onUpdateTimeClick = () => {
     currentTime.value = new Date().toLocaleTimeString();
 };
+
 const router = useRouter();
 
 const navigateToPrivacy = (event) => {

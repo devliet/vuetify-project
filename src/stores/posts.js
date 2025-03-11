@@ -41,7 +41,7 @@ export const usePostsStore = defineStore('posts',
 
                 }
 
-                console.log( this.posts);
+                // console.log( this.posts);
             }
 
             ,
