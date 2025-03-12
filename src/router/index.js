@@ -20,7 +20,7 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-
+//add a post for emilsys = 121
     {
       path: "/user/:userId",
       name: "user",
@@ -44,7 +44,7 @@ const router = createRouter({
     {
       path: '/manage',
       name: 'manage',
-      component: HomeView,
+    //  component: HomeView,
       children: [
         {
           path: "posts-add",

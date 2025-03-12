@@ -1,21 +1,7 @@
 <template>
-  <!-- <SocialPost v-for="(post, index) in posts.value" :username="post.username" :postId="post.postId"
-    :avatarSrc="post.avatarSrc" :post="post.post" :likes="post.likes" :key="post.postId" :userId="index"
-    @delete="onDelete(index)"></SocialPost> -->
-  <!-- substituting retweets -->
-  <!-- vue 3 v-for across async fetch data -->
-  <p>
-    Social posts below
-  </p>
-  <div v-if="posts">
-    <p>
-      let's go
-    </p>
     <SocialPost v-for="(post, index) in posts" :postId="post.postId" :username="post.username" :userId="post.userId"
       :avatarSrc="post.avatarSrc" :post="post.post" :likes="post.likes" :retweets="post.retweets" :key="post.postId"
       @delete="onDelete(index)"></SocialPost>
-
-  </div>
 </template>
 
 <script setup>

@@ -48,5 +48,13 @@ const fetchUser = (userId) => {
         });
 } 
 const route = useRoute();
+
+console.log(JSON.stringify(route) + "zz")
 fetchUser(route.params.userId + 1);
 </script>
+<style>
+input
+{
+    width: 400px
+}
+</style>
